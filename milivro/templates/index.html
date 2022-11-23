@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>milivro</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+  *{
+	margin: 0;
+	padding: 0;
+}
+body{
+	  height: 100vh;
+	  width: 100%;
+	  background: url("{{ url_for('static', filename='bg.png') }}");
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: cover;
+  }
+
+  h1{
+  	color: white;
+  	font-family: "arial";
+  	font-size: 70px;
+  	text-align: center;
+  }
+  h4{
+  	color: white;
+  	font-family: "arial";
+  	font-size: 20px;
+  	text-align: center;
+  }
+  .p{
+  	color: white;
+  	text-align: center;
+  	margin-top: 50px;
+  }
+
+  .navigation a{
+		color: white;
+		text-decoration: none;
+		font-weight: 500;
+		letter-spacing: 1px;
+		position: relative;
+		top: 30px;
+		right: 30px;
+		text-align: right;
+		/*border-radius: 20px;*/
+		transition-property: background;
+		
+	}
+
+
+  a{
+		text-decoration: none;
+		color: white;
+	}
+
+	button{
+		margin-top: 15px;
+		width: 250px;
+		outline: none;
+		border: none;
+		font-family: "Open Sans", sans-serif;
+		height: 50px;
+		border-radius: 50px;
+		background-color: transparent;
+		background: white;
+		cursor: pointer;
+		text-transform: uppercase;
+		font-size: 20px;
+		box-shadow: 0 0 1em #f1f1f1;
+		
+	}
+
+ @media(max-width: 760px){
+ 	h1{
+ 		margin-top: 50px;
+ 	}
+
+ 	button{
+ 		display: inline-block;
+ 		margin-left: 16.9%;
+ 	}
+ }	
+
+
+  @media(min-width: 900px){
+  	h1{
+  		margin-top: 150px;
+  	}
+
+  	button{
+  		width: 400px;
+  		height: 60px;
+  		margin-top: 50px;
+  		margin-left: 180px;
+  		display: inline-block;
+  	}
+
+  }
+
+  @media(width: 820px){
+  	button{
+  		margin-left: 100px;
+  	}
+  }
+   @media(width: 768px){
+  	button{
+  		margin-left: 100px;
+  	}
+  }
+  @media(width: 912px){
+  	button{
+  		margin-left: 30px;
+  	}
+  }
+  @media(width: 540px){
+  	button{
+  		margin-left: 140px;
+  	}
+  }
+
+  @media(width: 1024px){
+  	button{
+  		margin-left: 80px;
+  	}
+  }
+</style>
+<body>
+	<div class="navigation">
+		<a href="/login"><p>Account</p></a>		
+	</div>
+	
+	<h1>milivro</h1>
+	<h4>Ache seus livros, adicione em sua estante e se divirta!</h4>
+	<a href="/login"><button>Get started</button></a>
+	<a href="/preview"><button>Preview</button></a>
+	<p class="p">O modo visualizar possui recursos limitados* </p>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>milivro | login</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style type="text/css">
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+  }
+  .container-forms{
+   	height: 100vh;
+	width: 100%;
+	background:url("{{ url_for('static', filename='bg.png') }}");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+  .login{
+    background-color: transparent;
+    border-radius: 6px;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    color: white;
+  }
+  header{
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    /*color: #232836;*/
+    color: white;
+  }
+  form{
+    margin-top: 30px;
+  }
+
+  form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .field input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 6px;
+    outline: none;
+    border:none; 
+  }
+  .field input{
+    padding: 0 15px;
+    border: 1px solid #cacaca;
+  }
+
+  .form-link{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .form-link span,
+  .form-link span a{
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .form-link a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .form-link a:hover{
+    text-decoration: underline;
+  }
+
+  .btn{
+    cursor: pointer;
+    color: white;
+    background: #5e00b1;
+  }
+
+  .btn:hover{
+    transition: .80s;
+    background: linear-gradient(to bottom right ,#5e00b1, #4d54ff);
+  }
+
+</style>
+<body>
+    <!--<link rel="stylesheet" href="estilo.css"/>-->
+  </head>
+  <body>
+    <section class="container-forms">
+      <div class="login">
+        <div class="form-content">
+          <header>Login</header>
+          <form action="{{url_for('login')}}" method="post">
+            <div class="field input-field">
+              <input type="email" name="email" placeholder="Email" class="input" required>
+            </div>
+            <div class="field input-field">
+              <input type="password" name="senha" placeholder="Senha" class="senha" required>
+            </div>
+            <div class="field button-field">
+              <input type="submit" value="Entrar" class="btn solid" />
+            </div>
+            <div class="form-link">
+              <span>Não tem uma conta?<a href="/sign" class="signup">Clique aqui</a></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+</body>
+</html>
