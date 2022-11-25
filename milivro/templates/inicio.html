@@ -5,16 +5,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<a href="/">Logout</a>
-	<input type="name" placeholder="Digite o nome do livro...">
-	<input type="submit" value="Pesquisar" />
-	<a href="">Estante</a><br>
+	<form action="{{url_for('inicio')}}" method="post">
+		<a href="/">Logout</a>
+		<input type="name" name="livr" placeholder="Digite o nome do livro...">
+		<input type="submit" value="Pesquisar" />
+		<a href="">Estante</a><br>
+	</form>
 	<h3>Filtros</h3>
-	<a href="">ficção</a>
-	<a href="">comédia</a>
-	<a href="">ação</a>
-	<a href="">aventura</a>
-	<a href="">juvenil</a>
+	<a href="/inicio/ficcao">ficção</a>
+	<a href="/inicio/comedia">comédia</a>
+	<a href="/inicio/acao">ação</a>
+	<a href="/inicio/aventura">aventura</a>
+	<a href="/inicio/juvenil">juvenil</a>
 	<div>
 		<img src= "{{ im1 }}">
 		<h4>{{ l1 }}</h4>
@@ -63,7 +65,6 @@
 	<div>
 		<img src= "{{ im10 }}">
 		<h4>{{ l10 }}</h4>
-		
 	</div>
 </body>
 </html>

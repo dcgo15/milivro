@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>milivro | preview</title>
+	<title>milivro | box</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<form action="{{url_for('previa')}}" method="post">
+	<form action="{{url_for('inicio')}}" method="post">
+		<a href="/">Logout</a>
 		<input type="name" name="livr" placeholder="Digite o nome do livro...">
 		<input type="submit" value="Pesquisar" />
-		<a href="/login">Account</a>
+		<a href="">Estante</a><br>
 	</form>
 	<h3>Filtros</h3>
 	<a href="/inicio/ficcão">ficção</a>
@@ -64,7 +65,7 @@
 	<div>
 		<img src= "{{ im10 }}">
 		<h4>{{ l10 }}</h4>
-		
 	</div>
+
 </body>
 </html>
