@@ -7,32 +7,6 @@ __chave_api__ = "AIzaSyCRaDBOAxPHRmqsegnSlm16wnq7hc0eg14"
 import requests
 
 
-'''
-#CATEGORIAS
-
-livro = input("Digite o nome do livro: ")
-#categoria=input("Categoria:")
-#+subject:{categoria}
-
-link = f"https://www.googleapis.com/books/v1/volumes?q={livro}"
-
-resposta = requests.get(link)
-conteudo = resposta.json()
-
-re = []
-for itm in conteudo["items"]:
-    re.append(itm["volumeInfo"]["title"])
-    #re = itm["volumeInfo"]["title"]
-    
-    #l = [str(i) for i in re]
-    #li = str("".join(l))
-print(re[2])
-    
-#livros = conteudo["items"][0]
-
-'''
-
-
 #'''
 from flask import Flask, redirect, render_template, url_for, session,request
 import mysql.connector
@@ -305,6 +279,10 @@ def previa():
     return render_template("preview.html")
 
 
+@app.route("/inicio/livro/", methods=["GET", "POST"])
+def estante():
+    return render_template("livro.html")
+
 @app.route("/inicio", methods=["GET", "POST"])
 def inicio():
     if request.method=="POST":
@@ -387,6 +365,6 @@ def sign():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port="9701")
+    app.run(debug=True, port="9700")
 
 #'''
